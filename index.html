@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Mascota Feliz</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="contenido">
+        <div class="cabecera">Encuentra a tu Mascota</div>
+
+        <div class="elemento-centro">
+            <div class="logo">
+                <img src="img/logo.jpg" alt="Mascota Feliz Logo">
+            </div>
+
+            <div class="datos">
+                <input class="caja-texto" type="text" name="user" id="user" placeholder="Ingrese su usuario">
+                <input class="caja-texto" type="password" name="pass" id="pass" placeholder="Ingrese la contraseña">
+            </div>
+            <br>
+            <div class="botones-accion">
+                <form action="lista.html" method="post" onsubmit="return validarusu()">
+                    <button class="boton-login" type="submit">
+                        Iniciar sesión
+                    </button>
+                </form>
+
+                <a class="link-texto" href="#" id="cambiar-contrasena">Cambiar Contraseña</a>
+            </div>
+        </div>
+        <div class="pie">UPN - 2023</div>
+    </div>
+
+    <script>
+        function validarusu() {
+            var user = document.getElementById('user').value;
+            var pass = document.getElementById('pass').value;
+
+            if (user === 'N00283334' && pass === '74609319') {
+                return true;
+            } else {
+                alert('Identificación incorrecta. Inténtelo de nuevo.');
+                return false;
+            }
+        }
+
+        document.getElementById('cambiar-contrasena').addEventListener('click', function (e) {
+            e.preventDefault(); 
+            alert('Pronto, habilitaremos esta opción');
+        });
+    </script>
+</body>
+
+</html>
